@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaohongshu Content AI - 小红书内容生成器</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #ff2442; }
+        textarea, input, button { width: 100%; margin: 10px 0; padding: 10px; }
+        button { background: #ff2442; color: white; border: none; cursor: pointer; }
+        #output { white-space: pre-wrap; background: #f5f5f5; padding: 15px; }
+    </style>
+</head>
+<body>
+    <h1>小红书 AI 内容生成器</h1>
+    <p>输入主题，生成优化的小红书笔记、标题和标签。</p>
+    <input type="text" id="topic" placeholder="输入主题，例如：夏日穿搭推荐">
+    <button onclick="generate()">生成内容</button>
+    <div id="output"></div>
+    <script>
+        function generate() {
+            const topic = document.getElementById('topic').value;
+            if (!topic) { alert('请输入主题'); return; }
+            // MVP: Placeholder generation. Will integrate real AI later.
+            const output = `标题建议：\n1. ${topic}：必看！这样搭配超出片\n2. 夏日穿搭秘籍：${topic}的正确打开方式\n\n笔记内容：\n今天分享关于${topic}的实用技巧。\n\n标签：#${topic} #小红书好物 #生活技巧`;
+            document.getElementById('output').textContent = output;
+        }
+    </script>
+</body>
+</html>
